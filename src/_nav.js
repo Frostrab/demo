@@ -35,5 +35,26 @@ export default {
       url: '/Material-Master-Maintenance',
       icon: 'icon-wrench'
     },
+    {
+      name: 'Newplan',
+      url: '/newplan',
+      icon: 'icon-wrench'
+    },
+    {
+      name: 'Subplan',
+      url: '/subplan',
+      icon: 'icon-wrench'
+    },
+    {
+      name: 'Newjob',
+      url: '/newjob',
+      icon: 'icon-wrench'
+    },
+    {
+      name: 'Newprop',
+      url: '/newprop',
+      icon: 'icon-wrench'
+    },
+    
   ],
 };

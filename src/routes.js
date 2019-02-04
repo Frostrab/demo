@@ -44,6 +44,11 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
+const Newplan = React.lazy(() => import('./views/Newplan/Newplan.js'));
+const Subplan = React.lazy(() => import('./views/Subplan/Subplan.js'));
+const Newjob = React.lazy(() => import('./views/Newjob/Newjob.js'));
+const Newprop = React.lazy(() => import('./views/Newprop/Newprop.js'));
+
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
@@ -96,6 +101,12 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+
+  { path: '/newplan', exact: true, name: 'Newplan', component: Newplan },
+  { path: '/subplan', exact: true, name: 'Subplan', component: Subplan },
+  { path: '/newjob', exact: true, name: 'Newjob', component: Newjob },
+  { path: '/newprop', exact: true, name: 'Newprop', component: Newprop },
+
 ];
 
 export default routes;
