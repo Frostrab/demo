@@ -45,42 +45,42 @@ export default {
       },
       {
         name: 'กลุ่มตัวชี้วัด',
-        url: '/Material-Master-Maintenance',
+        url: '/groupindi',
         icon: 'icon-wrench'
       },
       {
         name: 'หลักเกณฑ์',
-        url: '/Material-Master-Maintenance',
+        url: '/formula',
         icon: 'icon-wrench'
       },
       {
         name: 'แบบประเมิณ',
-        url: '/Material-Master-Maintenance',
+        url: '/formtest',
         icon: 'icon-wrench'
       },
       {
         name: 'ระยะเวลาการประเมิณ',
-        url: '/Material-Master-Maintenance',
+        url: '/timetest',
         icon: 'icon-wrench'
       },
       {
         name: 'การกำหนดระยะเวลากับแบบประเมิณ',
-        url: '/Material-Master-Maintenance',
+        url: '/managetime',
         icon: 'icon-wrench'
       },
       {
         name: 'สินค้านับสต็อก',
-        url: '/Material-Master-Maintenance',
+        url: '/checkstock',
         icon: 'icon-wrench'
       },
       {
         name: 'สินค้าสำหรับการประเมิณ CA',
-        url: '/Material-Master-Maintenance',
+        url: '/itemcheck',
         icon: 'icon-wrench'
       },
       {
         name: 'ตารางเกรด CA',
-        url: '/Material-Master-Maintenance',
+        url: '/gradeca',
         icon: 'icon-wrench'
       },]
     },

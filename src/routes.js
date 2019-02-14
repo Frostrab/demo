@@ -45,7 +45,15 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
 
-const Indicate = React.lazy(() => import('./views/Indicate/Index'));
+const Indicate = React.lazy(() => import('./views/Indicate/index'));
+const Groupindi = React.lazy(() => import('./views/Groupindi/index'));
+const Formula = React.lazy(() => import('./views/Formula/index'));
+const Formtest = React.lazy(() => import('./views/Formtest/index'));
+const Timetest = React.lazy(() => import('./views/Timetest/index'));
+const Managetime = React.lazy(() => import('./views/Managetime/index'));
+const Itemcheck = React.lazy(() => import('./views/Itemcheck/index'));
+const Checkstock = React.lazy(() => import('./views/Checkstock/index'));
+const Gradeca = React.lazy(() => import('./views/Gradeca/index'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -102,6 +110,14 @@ const routes = [
 
   
   { path: '/indicate', exact: true, name: 'Indicate', component: Indicate },
+  { path: '/groupindi', exact: true, name: 'Groupindi', component: Groupindi },
+  { path: '/formula', exact: true, name: 'Formula', component: Formula },
+  { path: '/formtest', exact: true, name: 'Formtest', component: Formtest },
+  { path: '/timetest', exact: true, name: 'Timetest', component: Timetest },
+  { path: '/managetime', exact: true, name: 'Managetime', component: Managetime },
+  { path: '/itemcheck', exact: true, name: 'Itemcheck', component: Itemcheck },
+  { path: '/checkstock', exact: true, name: 'Checkstock', component: Checkstock },
+  { path: '/gradeca', exact: true, name: 'Gradeca', component: Gradeca },
 ];
 
 export default routes;
