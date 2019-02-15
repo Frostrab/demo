@@ -4,6 +4,11 @@ import React, {PureComponent} from 'react'
 import 'antd/dist/antd.css';
 import { Table, Button } from 'antd';
 import TableF8 from './TableF8';
+import Displayitem from './Displayitem';
+import Createitem from './Createitem';
+import Copyitem from './Copyitem';
+import Edititem from './Edititem';
+import Deleteitem from './Deleteitem';
 
 export default class index extends PureComponent{
     render(){
@@ -13,6 +18,16 @@ export default class index extends PureComponent{
                 <h2 style={{marginTop:20}}>สินค้าสำหรับการประเมิณ CA</h2>
                 <Button type="primary">สร้างใหม่</Button>
                 <TableF8 />
+
+                <Displayitem />
+
+                <Createitem />
+
+                <Copyitem />
+
+                <Edititem />
+
+                <Deleteitem />
             </div>
         )
     }

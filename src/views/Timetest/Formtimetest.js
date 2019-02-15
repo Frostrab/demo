@@ -31,7 +31,7 @@ function onChange(date, dateString) {
   
   const Step = Steps.Step;
   
-  export default class Form5 extends PureComponent {
+  export default class Formtimetest extends PureComponent {
   
    
     state ={

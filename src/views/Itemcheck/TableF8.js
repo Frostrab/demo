@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 
 import 'antd/dist/antd.css';
-import { Table } from 'antd';
+import { Table, Radio } from 'antd';
 
 function onChange(pagination, filters, sorter) {
     console.log('params', pagination, filters, sorter);
@@ -15,29 +15,34 @@ export default class TableF8 extends PureComponent{
 state ={
   data:[{
     key: '1',
-    name: 'John Brown',
-    max: 32,
-    status:''
+    yearstart: '2561',
+    quarterstart: 'ไตรมาส 1',
+    yearend:'2562',
+    quarterend:'ไตรมาส 1',
   }, {
-    key: '2',
-    name: 'Jim Green',
-    max: 32,
-    status:''
+    key:'2',
+    yearstart: '2570',
+    quarterstart: 'ไตรมาส 1',
+    yearend:'2570',
+    quarterend:'ไตรมาส 4',
   }, {
     key: '3',
-    name: 'Joe Black',
-    max: 32,
-    status:''
+    yearstart: '2571',
+    quarterstart: 'ไตรมาส 1',
+    yearend:'2572',
+    quarterend:'ไตรมาส 1',
   }, {
     key: '4',
-    name: 'Jim Red',
-    max: 32,
-    status:''
+    yearstart: '2577',
+    quarterstart: 'ไตรมาส 1',
+    yearend:'2579',
+    quarterend:'ไตรมาส 4',
   }],
 
   col1:[{
     title: 'ปีเริ่มต้น',
-    dataIndex: 'name',
+    dataIndex: 'yearstart',
+    width:'20%',
     filters: [{
       text: 'Joe',
       value: 'Joe',
@@ -61,12 +66,14 @@ state ={
     sortDirections: ['descend'],
   }, {
     title: 'ไตรมาสเริ่มต้น',
-    dataIndex: 'max',
+    dataIndex: 'quarterstart',
+    width:'20%',
     defaultSortOrder: 'descend',
     sorter: (a, b) => a.age - b.age,
   }, {
     title: 'ปีสิ้นสุด',
-    dataIndex: 'status',
+    dataIndex: 'yearend',
+    width:'20%',
     filters: [{
       text: 'London',
       value: 'London',
@@ -81,7 +88,8 @@ state ={
   },
   {
     title: 'ไตรมาสสิ้นสุด',
-    dataIndex: 'status',
+    dataIndex: 'quarterend',
+    width:'20%',
     filters: [{
       text: 'London',
       value: 'London',
@@ -99,6 +107,13 @@ state ={
   {
     title: '',
     dataIndex: 'address',
+    width:'20%',
+    render: () => (
+      <Radio.Group size="small" value="" >
+          <Radio.Button value="display">แสดง</Radio.Button>
+          <Radio.Button value="edit">แก้ไข</Radio.Button>
+          <Radio.Button value="delete">ลบ</Radio.Button>
+        </Radio.Group> ),
   },]
 }
 
