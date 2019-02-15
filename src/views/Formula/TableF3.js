@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 
 import 'antd/dist/antd.css';
-import { Table } from 'antd';
+import { Table, Radio, } from 'antd';
 
 function onChange(pagination, filters, sorter) {
     console.log('params', pagination, filters, sorter);
@@ -15,32 +15,24 @@ export default class TableF3 extends PureComponent{
 state ={
   data:[{
     key: '1',
-    name: 'John Brown',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'หลักเกณฑ์1',
+    frequency: 'รายสัปดาห์',
+    status:'มีผลใช้งาน'
   }, {
     key: '2',
-    name: 'Jim Green',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'หลักเกณฑ์2',
+    frequency: 'รายเดือน',
+    status:'มีผลใช้งาน'
   }, {
     key: '3',
-    name: 'Joe Black',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
-  }, {
-    key: '4',
-    name: 'Jim Red',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
-  }],
+    name: 'หลักเกณฑ์3',
+    frequency: 'รายไตรมาส',
+    status:'ยังไม่มีผลใช้งาน'
+  }, ],
   col1:[{
     title: 'ชื่อหลักเกณฑ์',
     dataIndex: 'name',
+    width:'40%',
     filters: [{
       text: 'Joe',
       value: 'Joe',
@@ -64,12 +56,14 @@ state ={
     sortDirections: ['descend'],
   }, {
     title: 'ความถี่การกรอกข้อมูล',
-    dataIndex: 'max',
+    dataIndex: 'frequency',
+    width:'10%',
     defaultSortOrder: 'descend',
     sorter: (a, b) => a.age - b.age,
   }, {
     title: 'สถานะ',
-    dataIndex: 'type',
+    dataIndex: 'status',
+    width:'10%',
     filters: [{
       text: 'London',
       value: 'London',
@@ -85,6 +79,14 @@ state ={
   {
     title: '',
     dataIndex: 'button',
+    width:'20%',
+    render: () => (
+      <Radio.Group size="small" value="" >
+          <Radio.Button value="display">แสดง</Radio.Button>
+          <Radio.Button value="edit">แก้ไข</Radio.Button>
+          <Radio.Button value="copy">คัดลอก</Radio.Button>
+          <Radio.Button value="delete">ลบ</Radio.Button>
+        </Radio.Group> ),
   }
 ]
 }

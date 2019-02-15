@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 
 import 'antd/dist/antd.css';
-import { Table } from 'antd';
+import { Table, Radio } from 'antd';
 
 function onChange(pagination, filters, sorter) {
     console.log('params', pagination, filters, sorter);
@@ -15,32 +15,25 @@ export default class TableF4 extends PureComponent{
 state ={
   data:[{
     key: '1',
-    name: 'John Brown',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'แบบประเมิณ1',
+    status:'มีผลใช้งาน',
   }, {
     key: '2',
-    name: 'Jim Green',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'แบบประเมิณ2',
+    status:'มีผลใช้งาน',
   }, {
     key: '3',
-    name: 'Joe Black',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'แบบประเมิณ3',
+    status:'มีผลใช้งาน',
   }, {
     key: '4',
-    name: 'Jim Red',
-    max: 32,
-    type: 'New York No. 1 Lake Park',
-    status:''
+    name: 'แบบประเมิณ4',
+    status:'มีผลใช้งาน',
   }],
   col1:[{
     title: 'ชื่อแบบประเมิณ',
     dataIndex: 'name',
+    width:'40%',
     filters: [{
       text: 'Joe',
       value: 'Joe',
@@ -64,13 +57,14 @@ state ={
     sortDirections: ['descend'],
   },{
     title: 'สถานะ',
-    dataIndex: 'type',
+    dataIndex: 'status',
+    width:'10%',
     filters: [{
-      text: 'London',
-      value: 'London',
+      text: 'มีผลใช้งาน',
+      value: 'มีผลใช้งาน',
     }, {
-      text: 'สถานะ',
-      value: 'New York',
+      text: 'ยังไม่มีผลใช้งาน',
+      value: 'ยังไม่มีผลใช้งาน',
     }],
     filterMultiple: false,
     onFilter: (value, record) => record.address.indexOf(value) === 0,
@@ -80,6 +74,14 @@ state ={
   {
     title: '',
     dataIndex: 'button',
+    width:'20%',
+    render: () => (
+      <Radio.Group size="small" value="" >
+          <Radio.Button value="display">แสดง</Radio.Button>
+          <Radio.Button value="edit">แก้ไข</Radio.Button>
+          <Radio.Button value="copy">คัดลอก</Radio.Button>
+          <Radio.Button value="delete">ลบ</Radio.Button>
+        </Radio.Group> ),
   }
 ]
 }
@@ -96,7 +98,7 @@ state ={
   dataSource={this.state.data} 
   onChange={onChange}
   
-  />,
+  />
             </div>
         )
     }

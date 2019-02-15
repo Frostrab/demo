@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react'
 
 import 'antd/dist/antd.css';
-import { Table } from 'antd';
+import { Table, Radio } from 'antd';
 
 function onChange(pagination, filters, sorter) {
     console.log('params', pagination, filters, sorter);
@@ -48,6 +48,7 @@ state ={
   col1:[{
     title: 'ชื่อตัวชี้วัด',
     dataIndex: 'name',
+    width:'30%',
     filters: [{
       text: 'ทดลอง01',
       value: 'ทดลอง01',
@@ -77,11 +78,13 @@ state ={
   }, {
     title: 'คะแนนเต็ม',
     dataIndex: 'max',
+    width:'10%',
     defaultSortOrder: 'descend',
     sorter: (a, b) => a.max - b.max,
   }, {
     title: 'รูปแบบการกรอกข้อมูล',
     dataIndex: 'type',
+    width:'10%',
     filters: [{
       text: 'ใส่จำนวน',
       value: 'ใส่จำนวน',
@@ -97,6 +100,7 @@ state ={
   {
     title: 'สถานะ',
     dataIndex: 'status',
+    width:'10%',
     filters: [{
       text: 'มีผลใช้งาน',
       value: 'มีผลใช้งาน',
@@ -112,6 +116,14 @@ state ={
   {
     title: '',
     dataIndex: 'address',
+    width:'20%',
+    render: () => (
+      <Radio.Group size="small" value="" >
+          <Radio.Button value="display">แสดง</Radio.Button>
+          <Radio.Button value="edit">แก้ไข</Radio.Button>
+          <Radio.Button value="copy">คัดลอก</Radio.Button>
+          <Radio.Button value="delete">ลบ</Radio.Button>
+        </Radio.Group> ),
   },]
 }
 
@@ -127,7 +139,7 @@ state ={
   dataSource={this.state.data} 
   onChange={onChange}
   
-  />,
+  />
             </div>
         )
     }
