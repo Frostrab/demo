@@ -22,7 +22,7 @@ export default class Createindicate extends PureComponent{
           </Panel>
         </Collapse>,
         <Button color="warning" style={{marginBottom:10 , marginTop:10}}>ย้อนกลับ</Button>{' '}
-        <Button color="primary" style={{marginBottom:10 , marginTop:10}}>บันทึก</Button>{' '}
+        <Button type="primary" style={{marginBottom:10 , marginTop:10}}>บันทึก</Button>{' '}
    
         </div>
     )

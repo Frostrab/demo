@@ -15,33 +15,33 @@ export default class TableF1 extends PureComponent{
 state ={
   data:[{
     key: '1',
-    name: 'ทอดลอง01',
-    max: 100,
+    name: 'ทดลอง01',
+    max: '100',
     type: 'ใส่จำนวน',
     status:'มีผลใช้งาน'
   }, {
     key: '2',
-    name: 'ทอดลอง02',
-    max: 100,
+    name: 'ทดลอง02',
+    max: '100',
     type: 'ใส่จำนวน',
     status:'มีผลใช้งาน'
   }, {
     key: '3',
     name: 'ทดลอง03',
-    max: 100,
+    max: '100',
     type: 'ใส่จำนวน',
     status:'ยังไม่มีผลใช้งาน'
   }, {
     key: '4',
     name: 'ทดลอง04',
-    max: 90,
+    max: '90',
     type: 'ใส่จำนวน',
     status:'ยังไม่มีผลใช้งาน'
   },
   {
     key: '5',
     name: 'ทดลอง05',
-    max: 100,
+    max: '100',
     type: 'ใส่จำนวน',
     status:'มีผลใช้งาน'
   }],
@@ -74,12 +74,22 @@ state ={
    
     onFilter: (value, record) => record.name.indexOf(value) === 0,
     sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'คะแนนเต็ม',
     dataIndex: 'max',
     width:'10%',
     defaultSortOrder: 'descend',
+    filters: [{
+      text: '100',
+      value: '100',
+    },
+    {
+      text: '90',
+      value: '90',
+    },
+  ],
+    onFilter: (value, record) => record.max.indexOf(value) === 0,
     sorter: (a, b) => a.max - b.max,
   }, {
     title: 'รูปแบบการกรอกข้อมูล',
@@ -93,8 +103,8 @@ state ={
       value: 'ใส่ตัวอักษร',
     }],
     filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.type.indexOf(value) === 0,
+    sorter: (a, b) => a.type.length - b.type.length,
     sortDirections: ['descend', 'ascend'],
   },
   {
@@ -109,8 +119,8 @@ state ={
       value: 'ยังไม่มีผลใช้งาน',
     }],
     filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
   },
   {

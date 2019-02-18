@@ -14,6 +14,7 @@ import {
     Button,
     Select,
     Checkbox,
+    Form,
 
 } from 'antd';
 import 'antd/dist/antd.css';
@@ -27,6 +28,7 @@ const Option = Select.Option;
   }
   
   const Step = Steps.Step;
+
   
   export default class Formindicate extends PureComponent {
   
@@ -57,14 +59,18 @@ const Option = Select.Option;
   }
   
     render() {
+
+
       return (
         <div style={{marginBottom:20}} >
        
         
           <InputGroup compact>
-            <Col sm={4}> ชื่อตัวชี้วัด</Col>
+            <Col sm={4}>
+            ชื่อตัวชี้วัด
+            </Col>
             <Col span={12}>
-            <Input style={{width:'100%'}} type="text" name="indiname" id="indiname" placeholder="Indicator1" />
+            <Input style={{width:'100%'}} type="text" name="indiname" id="indiname" placeholder="Indicator1"  />
             </Col>
           </InputGroup>
           <br /> 
@@ -88,6 +94,8 @@ const Option = Select.Option;
             <Select defaultValue="ไม่ระบุคะแนน">
             <Option value="10">10</Option>
             <Option value="15">15</Option>
+            <Option value="20">20</Option>
+            <Option value="50">50</Option>
           </Select>
             </Col>
           </InputGroup>
@@ -96,8 +104,8 @@ const Option = Select.Option;
             <Col sm={4}> รูปแบบการกรอกข้อมูล</Col>
             <Col sm={3}>
             <Select defaultValue="ใส่จำนวน">
-            <Option value="10">10</Option>
-            <Option value="15">15</Option>
+            <Option value="ใส่จำนวน">ใส่จำนวน</Option>
+            <Option value="ใส่ตัวอักษร">ใส่ตัวอักษร</Option>
             
           </Select>
           </Col>
@@ -129,7 +137,7 @@ const Option = Select.Option;
           <InputGroup compact>
             <Col sm={4}> สถานะ</Col>
             <Col span={12}>
-            <Select defaultValue="มีผลใช้งาน">
+            <Select defaultValue="สถานะ">
             <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
             <Option value="ไม่มีผลใช้งาน">ไม่มีผลใช้งาน</Option>
           </Select>
