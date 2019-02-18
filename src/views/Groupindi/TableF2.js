@@ -16,22 +16,22 @@ state ={
   data:[{
     key: '1',
     name: 'กลุ่มตัวชี้วัด1',
-    max: 10,
+    max: '10',
     status:'มีผลใช้งาน'
   }, {
     key: '2',
     name: 'กลุ่มตัวชี้วัด2',
-    max: 10,
+    max: '10',
     status:'ไม่มีผลใช้งาน'
   }, {
     key: '3',
     name: 'กลุ่มตัวชี้วัด3',
-    max: 15,
+    max: '15',
     status:'ไม่มีผลใช้งาน'
   }, {
     key: '4',
     name: 'กลุ่มตัวชี้วัด4',
-    max: 15,
+    max: '15',
     status:'มีผลใช้งาน'
   }],
 
@@ -59,13 +59,21 @@ state ={
    
     onFilter: (value, record) => record.name.indexOf(value) === 0,
     sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'คะแนนเต็ม',
     dataIndex: 'max',
     width:'10%',
+    filters:[{
+      text:'10',
+      value:'10',
+    },{
+      text:'15',
+      value:'15',
+    },],
     defaultSortOrder: 'descend',
-    sorter: (a, b) => a.age - b.age,
+    onFilter: (value, record) => record.max.indexOf(value) === 0,
+    sorter: (a, b) => a.max - b.max,
   }, {
     title: 'สถานะ',
     dataIndex: 'status',
@@ -77,9 +85,8 @@ state ={
       text: 'ไม่มีผลใช้งาน',
       value: 'ไม่มีมีผลใช้งาน',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
   },
   

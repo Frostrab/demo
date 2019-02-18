@@ -41,27 +41,19 @@ state ={
   col1:[{
     title: 'ปี',
     dataIndex: 'year',
-    filters: [{
-      text: 'Joe',
-      value: 'Joe',
-    }, {
-      text: 'Jim',
-      value: 'Jim',
-    }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
+    filters: [
+    {
+      text: '2561',
+      value: '2561',
+    },
+     {
+      text: '2570',
+      value: '2570',
+    },],
    
-    onFilter: (value, record) => record.name.indexOf(value) === 0,
-    sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    onFilter: (value, record) => record.year.indexOf(value) === 0,
+    sorter: (a, b) => a.year.length - b.year.length,
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'ประเภท Period',
     dataIndex: 'Ptype',
@@ -76,23 +68,27 @@ state ={
       text: 'รายไตรมาส',
       value: 'รายไตรมาส', 
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.Ptype.indexOf(value) === 0,
+    sorter: (a, b) => a.Ptype.length - b.Ptype.length,
     sortDirections: ['descend', 'ascend'],
   }, {
     title: 'ชื่อ Period',
     dataIndex: 'Pname',
     filters: [{
-      text: 'London',
-      value: 'London',
+      text: '2561 รายสัปดาห์',
+      value: '2561 รายสัปดาห์',
+    },{
+      text: '2561 รายไตรมาส',
+      value: '2561 รายไตรมาส',
+    },{
+      text: '2570 รายสัปดาห์',
+      value: '2570 รายสัปดาห์',
     }, {
-      text: 'สถานะ',
-      value: 'New York',
+      text: '2570 รายไตรมาส',
+      value: '2570 รายไตรมาส',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.Pname.indexOf(value) === 0,
+    sorter: (a, b) => a.Pname.length - b.Pname.length,
     sortDirections: ['descend', 'ascend'],
   },
   {
@@ -105,9 +101,8 @@ state ={
       text: 'ยังไม่มีผลใช้งาน',
       value: 'ยังไม่มีผลใช้งาน',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
  
   },{

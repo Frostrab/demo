@@ -34,46 +34,52 @@ state ={
     dataIndex: 'name',
     width:'40%',
     filters: [{
-      text: 'Joe',
-      value: 'Joe',
+      text: 'หลักเกณฑ์1',
+      value: 'หลักเกณฑ์1',
     }, {
-      text: 'Jim',
-      value: 'Jim',
-    }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
-   
+      text: 'หลักเกณฑ์2',
+      value: 'หลักเกณฑ์2',
+    },
+    {
+      text: 'หลักเกณฑ์3',
+      value: 'หลักเกณฑ์3',
+    },
+    ],
     onFilter: (value, record) => record.name.indexOf(value) === 0,
     sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'ความถี่การกรอกข้อมูล',
     dataIndex: 'frequency',
     width:'10%',
     defaultSortOrder: 'descend',
-    sorter: (a, b) => a.age - b.age,
+    filters: [{
+      text: 'รายสัปดาห์',
+      value: 'รายสัปดาห์',
+    }, {
+      text: 'รายเดือน',
+      value: 'รายเดือน',
+    },
+    {
+      text: 'รายไตรมาส',
+      value: 'รายไตรมาส',
+    },
+    ],
+    onFilter: (value, record) => record.frequency.indexOf(value) === 0,
+    sorter: (a, b) => a.frequency.length - b.frequency.length,
   }, {
     title: 'สถานะ',
     dataIndex: 'status',
     width:'10%',
     filters: [{
-      text: 'London',
-      value: 'London',
+      text: 'มีผลใช้งาน',
+      value: 'มีผลใช้งาน',
     }, {
-      text: 'สถานะ',
-      value: 'New York',
+      text: 'ยังไม่มีผลใช้งาน',
+      value: 'ยังไม่มีผลใช้งาน',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
   },
   {

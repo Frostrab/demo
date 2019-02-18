@@ -20,7 +20,7 @@ state ={
   }, {
     key: '2',
     name: 'แบบประเมิณ2',
-    status:'มีผลใช้งาน',
+    status:'ยังไม่มีผลใช้งาน',
   }, {
     key: '3',
     name: 'แบบประเมิณ3',
@@ -35,26 +35,23 @@ state ={
     dataIndex: 'name',
     width:'40%',
     filters: [{
-      text: 'Joe',
-      value: 'Joe',
+      text: 'แบบประเมิณ1',
+      value: 'แบบประเมิณ1',
     }, {
-      text: 'Jim',
-      value: 'Jim',
-    }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
+      text: 'แบบประเมิณ2',
+      value: 'แบบประเมิณ2',
+    },{
+      text: 'แบบประเมิณ3',
+      value: 'แบบประเมิณ3',
+    },{
+      text: 'แบบประเมิณ4',
+      value: 'แบบประเมิณ4',
+    },
+  ],
    
     onFilter: (value, record) => record.name.indexOf(value) === 0,
     sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend','ascend'],
   },{
     title: 'สถานะ',
     dataIndex: 'status',
@@ -66,9 +63,8 @@ state ={
       text: 'ยังไม่มีผลใช้งาน',
       value: 'ยังไม่มีผลใช้งาน',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
   },
   {

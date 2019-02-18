@@ -36,20 +36,7 @@ function onChange(date, dateString) {
    
     state ={
       checkNick: false,
-      col1 :[{
-        title:"GL Account",
-        dataIndex:"GLAcc",
-        key:"GLAcc",
-        width:"50%",
-    
-      },
-      {
-        title:"IO",
-        dataIndex:"IO",
-        key:"IO",
-        width:"50%",
-    
-      },]
+      
     }
 
     
@@ -92,7 +79,7 @@ function onChange(date, dateString) {
           <InputGroup compact>
             <Col sm={4}>สถานะ</Col>
             <Col span={12}>
-            <Select defaultValue="ยังไม่มีผลใช้งาน">
+            <Select defaultValue="สถานะ">
             <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
             <Option value="ยังไม่มีผลใช้งาน">ยังไม่มีผลใช้งาน</Option>
           </Select>

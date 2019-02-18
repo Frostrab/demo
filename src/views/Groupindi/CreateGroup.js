@@ -22,7 +22,7 @@ export default class CreateGroup extends PureComponent{
            <FormGroup />
           </Panel>
           <Panel header="รายการ" key="2">
-          <Button color="warning" style={{marginBottom:10 , marginTop:10}}>เพิ่ม</Button>{' '}
+          <Button type="primary" style={{marginBottom:10 , marginTop:10}}>เพิ่ม</Button>{' '}
           <TableGroup />
           </Panel>
         </Collapse>,

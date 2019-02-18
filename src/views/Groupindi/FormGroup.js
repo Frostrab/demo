@@ -105,7 +105,7 @@ const Option = Select.Option;
           <InputGroup compact>
             <Col sm={4}> สถานะ</Col>
             <Col span={12}>
-            <Select defaultValue="มีผลใช้งาน">
+            <Select defaultValue="สถานะ">
             <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
             <Option value="ไม่มีผลใช้งาน">ไม่มีผลใช้งาน</Option>
           </Select>

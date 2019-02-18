@@ -33,20 +33,7 @@ const Option = Select.Option;
    
     state ={
       checkNick: false,
-      col1 :[{
-        title:"GL Account",
-        dataIndex:"GLAcc",
-        key:"GLAcc",
-        width:"50%",
     
-      },
-      {
-        title:"IO",
-        dataIndex:"IO",
-        key:"IO",
-        width:"50%",
-    
-      },]
     }
 
     
@@ -88,21 +75,21 @@ const Option = Select.Option;
             <Select defaultValue="รายสัปดาห์">
             <Option value="Weekly">รายสัปดาห์</Option>
             <Option value="Monthly">รายเดือน</Option>
-            <Option value="Quater">ไตรมาส</Option>
+            <Option value="Quater">รายไตรมาส</Option>
           </Select>
             </Col>
           </InputGroup>
           <br />
            
           <InputGroup compact>
-            <Col sm={4}> ฟังก์ชันการคิดคะแนน</Col>
+            <Col sm={4}>ฟังก์ชันการคิดคะแนน</Col>
             <Col span={12}>
             <Input style={{width:'100%'}} type="text" name="format" id="format" placeholder="Criterial" />
             </Col>
           </InputGroup>
           <br />  
           <InputGroup compact>
-            <Col sm={4}> คะแนนเต็ม</Col>
+            <Col sm={4}>คะแนนเต็ม</Col>
             <Col span={12}>
             <Select defaultValue="100">
             <Option value="10">100</Option>
@@ -122,8 +109,8 @@ const Option = Select.Option;
             <Col sm={4}>เมนู</Col>
             <Col span={12}>
             <Select defaultValue="เมนูยอดขาย">
-            <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
-            <Option value="ไม่มีผลใช้งาน">ไม่มีผลใช้งาน</Option>
+            <Option value="เมนู_1">เมนู_1</Option>
+            <Option value="เมนู_2">เมนู_2</Option>
           </Select>
           </Col>
           </InputGroup>
@@ -131,9 +118,9 @@ const Option = Select.Option;
          
           
           <InputGroup compact>
-            <Col sm={4}> สถานะ</Col>
+            <Col sm={4}>สถานะ</Col>
             <Col span={12}>
-            <Select defaultValue="มีผลใช้งาน">
+            <Select defaultValue="สถานะ">
             <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
             <Option value="ไม่มีผลใช้งาน">ไม่มีผลใช้งาน</Option>
           </Select>
@@ -141,31 +128,31 @@ const Option = Select.Option;
           </InputGroup>
           <br /> 
           <InputGroup compact>
-            <Col sm={4}> ตัวแปรเพิ่มเติม 1</Col>
+            <Col sm={4}>ตัวแปรเพิ่มเติม 1</Col>
             <Col span={12}>
             <Input  style={{width:'100%'}} type="text" name="indiname" id="indiname" />
             </Col>
-            <Col sm={3}> (กรอกตัวเลขเท่านั้น)</Col>
+            <Col sm={3}>(กรอกตัวเลขเท่านั้น)</Col>
           </InputGroup>
           <br /> 
           <InputGroup compact>
-            <Col sm={4}> ตัวแปรเพิ่มเติม 2</Col>
+            <Col sm={4}>ตัวแปรเพิ่มเติม 2</Col>
             <Col span={12}>
             <Input  style={{width:'100%'}} type="text" name="indiname" id="indiname" />
             </Col>
-            <Col sm={3}> (กรอกตัวเลขเท่านั้น)</Col>
+            <Col sm={3}>(กรอกตัวเลขเท่านั้น)</Col>
           </InputGroup>
           <br /> 
           <InputGroup compact>
-            <Col sm={4}> ตัวแปรเพิ่มเติม 3</Col>
+            <Col sm={4}>ตัวแปรเพิ่มเติม 3</Col>
             <Col span={12}>
             <Input  style={{width:'100%'}} type="text" name="indiname" id="indiname" />
             </Col>
-            <Col sm={3}> (กรอกตัวเลขเท่านั้น)</Col>
+            <Col sm={3}>(กรอกตัวเลขเท่านั้น)</Col>
           </InputGroup>
           <br /> 
           <InputGroup compact>
-            <Col sm={4}> หมายเหตุ</Col>
+            <Col sm={4}>หมายเหตุ</Col>
             <Col span={12}>
             <TextArea name="comment" id="comment" />
             </Col>

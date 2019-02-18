@@ -22,6 +22,7 @@ export default class Createformula extends PureComponent{
            <Formformula />
           </Panel>
           <Panel header="รายการ" key="2">
+        <Button type="primary" style={{marginBottom:10 , marginTop:10}}>บันทึก</Button>{' '}
           <Tableformula />
           </Panel>
         </Collapse>
