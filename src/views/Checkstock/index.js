@@ -5,6 +5,9 @@ import 'antd/dist/antd.css';
 import { Table, Button } from 'antd';
 import TableF7 from './TableF7';
 import Displaycheck from './Displaycheck';
+import Createcheck from './Createcheck';
+import Editcheck from './Editcheck';
+import Deletecheck from './Deletecheck';
 
 export default class index extends PureComponent{
     render(){
@@ -16,6 +19,12 @@ export default class index extends PureComponent{
                 <TableF7 />
 
                 <Displaycheck />
+
+                <Createcheck />
+
+                <Editcheck />
+
+                <Deletecheck />
             </div>
         )
     }

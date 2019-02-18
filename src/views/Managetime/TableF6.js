@@ -23,7 +23,7 @@ state ={
     status:'มีผลใช้งาน'
   }, {
     key: '3',
-    name: 'ประเมิณ CA สำหรับ ไตรมาส 3 2570 by To',
+    name: 'ประเมิณ CA สำหรับ ไตรมาส 2 2570 by To',
     status:'ยังไม่มีผลใช้งาน'
   }, {
     key: '4',
@@ -35,26 +35,22 @@ state ={
     title: 'ชื่อการประเมิณ',
     dataIndex: 'name',
     filters: [{
-      text: 'Joe',
-      value: 'Joe',
+      text: 'ประเมิณ CA สำหรับ ไตรมาส 1 2560 by Petch',
+      value: 'ประเมิณ CA สำหรับ ไตรมาส 1 2560 by Petch',
     }, {
-      text: 'Jim',
-      value: 'Jim',
+      text: 'ประเมิณ CA สำหรับ ไตรมาส 3 2561 by Tee',
+      value: 'ประเมิณ CA สำหรับ ไตรมาส 3 2561 by Tee',
     }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
-   
+      text: 'ประเมิณ CA สำหรับ ไตรมาส 2 2570 by To',
+      value: 'ประเมิณ CA สำหรับ ไตรมาส 2 2570 by To',
+    },  {
+      text: 'ประเมิณ CA สำหรับ ไตรมาส 3 2570 by Tik',
+      value: 'ประเมิณ CA สำหรับ ไตรมาส 3 2570 by Tik',
+    },  
+  ],
     onFilter: (value, record) => record.name.indexOf(value) === 0,
     sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    sortDirections: ['descend','ascend'],
   },{
     title: 'สถานะ',
     dataIndex: 'status',
@@ -65,9 +61,8 @@ state ={
       text: 'ยังไม่มีผลใช้งาน',
       value: 'ยังไม่มีผลใช้งาน',
     }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+    onFilter: (value, record) => record.status.indexOf(value) === 0,
+    sorter: (a, b) => a.status.length - b.status.length,
     sortDirections: ['descend', 'ascend'],
   },
   

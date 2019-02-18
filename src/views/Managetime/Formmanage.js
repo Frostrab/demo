@@ -82,7 +82,7 @@ function onChange(date, dateString) {
           <InputGroup compact>
             <Col sm={4}>ไตรมาส</Col>
             <Col span={12}>
-            <Select defaultValue="ไตรมาส 1">
+            <Select defaultValue="เลือกไตรมาส">
             <Option value="ไตรมาส 1">ไตรมาส 1</Option>
             <Option value="ไตรมาส 2">ไตรมาส 2</Option>
             <Option value="ไตรมาส 3">ไตรมาส 3</Option>
@@ -94,6 +94,7 @@ function onChange(date, dateString) {
             <Col sm={4}>แบบประเมิณ</Col>
             <Col span={12}>
             <Select defaultValue="ไม่ระบุแบบประเมิณ">
+            <Option value="ไม่ระบุแบบประเมิณ">ไม่ระบุแบบประเมิณ</Option>
             <Option value="แบบประเมิณระดับ CA Template">แบบประเมิณระดับ CA Template</Option>
           </Select>
             </Col>
@@ -102,7 +103,7 @@ function onChange(date, dateString) {
           <InputGroup compact>
             <Col sm={4}>สถานะ</Col>
             <Col span={12}>
-            <Select defaultValue="มีผลใช้งาน">
+            <Select defaultValue="สถานะ">
             <Option value="มีผลใช้งาน">มีผลใช้งาน</Option>
             <Option value="ยังไม่มีผลใช้งาน">ยังไม่มีผลใช้งาน</Option>
           </Select>

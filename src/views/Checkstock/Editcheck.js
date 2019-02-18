@@ -12,7 +12,7 @@ function callback(key) {
 }
 
 
-export default class Createcheck extends PureComponent{
+export default class Editcheck extends PureComponent{
     render(){
     return(
         <div>

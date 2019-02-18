@@ -8,7 +8,6 @@ function onChange(pagination, filters, sorter) {
   }
   
 
-   
 
 export default class TableF8 extends PureComponent{
 
@@ -22,13 +21,13 @@ state ={
   }, {
     key:'2',
     yearstart: '2570',
-    quarterstart: 'ไตรมาส 1',
+    quarterstart: 'ไตรมาส 3',
     yearend:'2570',
     quarterend:'ไตรมาส 4',
   }, {
     key: '3',
     yearstart: '2571',
-    quarterstart: 'ไตรมาส 1',
+    quarterstart: 'ไตรมาส 2',
     yearend:'2572',
     quarterend:'ไตรมาส 1',
   }, {
@@ -42,48 +41,65 @@ state ={
   col1:[{
     title: 'ปีเริ่มต้น',
     dataIndex: 'yearstart',
-    width:'20%',
+    width:'15%',
     filters: [{
-      text: 'Joe',
-      value: 'Joe',
+      text: '2561',
+      value: '2561',
     }, {
-      text: 'Jim',
-      value: 'Jim',
+      text: '2570',
+      value: '2570',
+    },{
+      text: '2571',
+      value: '2571',
     }, {
-      text: 'Submenu',
-      value: 'Submenu',
-      children: [{
-        text: 'Green',
-        value: 'Green',
-      }, {
-        text: 'Black',
-        value: 'Black',
-      }],
-    }],
+      text: '2577',
+      value: '2577',
+    },],
    
-    onFilter: (value, record) => record.name.indexOf(value) === 0,
-    sorter: (a, b) => a.name.length - b.name.length,
-    sortDirections: ['descend'],
+    onFilter: (value, record) => record.yearstart.indexOf(value) === 0,
+    sorter: (a, b) => a.yearstart - b.yearstart,
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'ไตรมาสเริ่มต้น',
     dataIndex: 'quarterstart',
     width:'20%',
-    defaultSortOrder: 'descend',
-    sorter: (a, b) => a.age - b.age,
+    filters: [{
+      text: 'ไตรมาส 1',
+      value: 'ไตรมาส 1',
+    }, {
+      text: 'ไตรมาส 2',
+      value: 'ไตรมาส 2',
+    },{
+      text: 'ไตรมาส 3',
+      value: 'ไตรมาส 3',
+    }, {
+      text: 'ไตรมาส 4',
+      value: 'ไตรมาส 4',
+    },],
+   
+    onFilter: (value, record) => record.quarterstart.indexOf(value) === 0,
+    sorter: (a, b) => a.quarterstart.length - b.quarterstart.length,
+    sortDirections: ['descend','ascend'],
   }, {
     title: 'ปีสิ้นสุด',
     dataIndex: 'yearend',
-    width:'20%',
+    width:'15%',
     filters: [{
-      text: 'London',
-      value: 'London',
+      text: '2562',
+      value: '2562',
     }, {
-      text: 'สถานะ',
-      value: 'New York',
-    }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
+      text: '2570',
+      value: '2570',
+    },{
+      text: '2572',
+      value: '2572',
+    }, {
+      text: '2579',
+      value: '2579',
+    },],
+   
+    onFilter: (value, record) => record.yearend.indexOf(value) === 0,
+    sorter: (a, b) => a.yearend - b.yearend,
     sortDirections: ['descend', 'ascend'],
   },
   {
@@ -91,16 +107,22 @@ state ={
     dataIndex: 'quarterend',
     width:'20%',
     filters: [{
-      text: 'London',
-      value: 'London',
+      text: 'ไตรมาส 1',
+      value: 'ไตรมาส 1',
     }, {
-      text: 'สถานะ',
-      value: 'New York',
-    }],
-    filterMultiple: false,
-    onFilter: (value, record) => record.address.indexOf(value) === 0,
-    sorter: (a, b) => a.address.length - b.address.length,
-    sortDirections: ['descend', 'ascend'],
+      text: 'ไตรมาส 2',
+      value: 'ไตรมาส 2',
+    },{
+      text: 'ไตรมาส 3',
+      value: 'ไตรมาส 3',
+    }, {
+      text: 'ไตรมาส 4',
+      value: 'ไตรมาส 4',
+    },],
+   
+    onFilter: (value, record) => record.quarterend.indexOf(value) === 0,
+    sorter: (a, b) => a.quarterend.length - b.quarterend.length,
+    sortDirections: ['descend','ascend'],
   },
   
   
